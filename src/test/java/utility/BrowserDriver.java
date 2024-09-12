@@ -1,17 +1,19 @@
 package utility;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class BrowserDriver {
     public static WebDriver driver;
-    public FirefoxOptions options;
+    public ChromeOptions options;
     public BrowserDriver() {
         this.driver=driver;
-        System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+
-                "/src/test/resources/drivers/geckodriver");
-        this.driver=new FirefoxDriver();
+        System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+
+                "/src/test/resources/drivers/chromedriver");
+        this.driver=new ChromeDriver();
+        driver.get("https://anupdamoda.github.io/AceOnlineShoePortal/index.html");
+
     }
     public void close(){
         this.driver.close();

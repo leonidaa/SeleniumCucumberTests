@@ -7,7 +7,7 @@ import static pages.SingInPage.sendkeys_password;
 import static pages.SingInPage.sendkeys_username;
 
 public class SignInPage {
-    @When("^ User succesfully logs in$")
+    @When("User succesfully logs in")
     public void user_login_to_login_page() throws InterruptedException {
         sendkeys_username();
         sendkeys_password();
