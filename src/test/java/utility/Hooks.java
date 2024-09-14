@@ -19,9 +19,10 @@ public class Hooks {
         fis = new FileInputStream("src/test/resources/config.properties");
         config = new Properties();
         config.load(fis);
-        browser = config.getProperty("browser","chrome");
+        browser = config.getProperty("browser", "chrome");
         driver = new BrowserDriver(browser);
     }
+
     @After
     public void tearDown() {
         driver.close();

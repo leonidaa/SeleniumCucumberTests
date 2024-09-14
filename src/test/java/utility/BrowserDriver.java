@@ -17,6 +17,8 @@ public class BrowserDriver {
             System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") +
                     "/src/test/resources/drivers/geckodriver");
             optionsFF = new FirefoxOptions();
+            optionsFF.setBinary("/opt/firefox/firefox");
+
             driver = new FirefoxDriver(optionsFF);
         } else if (browser.equalsIgnoreCase("chrome")) {
             // Setup ChromeDriver
